@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap');
 *{
     padding: 0;
     margin: 0;
-    border: 0;
+    /* border: 0; */
     box-sizing: border-box;
-
+    list-style: none;
+    font-family: 'Space Grotesk', sans-serif;
 }
 
 body{
@@ -19,7 +21,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 600px;
-    gap: 15px;
+    gap: 10px;
 }
 
 header{
@@ -43,6 +45,7 @@ main{
 
 #head p{
     font-size: 1.2em;
+    
 }
 
 #head h1{
@@ -51,6 +54,8 @@ main{
 
 main h2{
     font-size: 2em;
+    color: hsl(25, 47%, 15%);
+    font-weight: 600;
 }
 
 img{
@@ -64,15 +69,14 @@ img{
 
 .thismonth p, .lastmonth p{
     font-size: 1em;
+    color: hsl(28, 10%, 53%);
+
 }
 
 .price{
     font-size: 2.6em;
-    /* display: none; */
-}
+    color: hsl(25, 47%, 15%);
 
-.price.visible{
-    display: block;
 }
 
 .lastmonth h4{
@@ -82,73 +86,119 @@ img{
 
 section {
     width: 100%;
-    height: 45vh;
+    height: 41vh;
+}
+
+hr{
+    margin-bottom: 20px;
 }
 
 .box{
-    width: 350px;
-    height: 200px;
-    background: transparent;
     display: flex;
-    gap: 20%;
-}
-
-.skill{
-    position: relative;
-    flex: 1;
     text-align: center;
+    gap: 20%;
+    width: 140px;
+    background: transparent;
 }
 
 .graph{
-    position: absolute;
+    position: relative;
+    height: 200px;
     width: 45px;
-    bottom: 0;
-    left: 50%;
-    transform: translate(35%);
-    background-color: hsl(10, 79%, 65%);
-    border-radius: 0.4em;
-
 }
 
-.graph:hover{
-    background-color: hsl(28, 10%, 53%);
-    cursor: pointer;
-}
-
-button{
-    background-color: red;
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-button:active{
-    background-color: brown;
-}
-
-h5{
+.percent{
     position: absolute;
-    top: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    padding: 3px;
+    width: 100%;
+    bottom: 0;
+    background-color: hsl(10, 79%, 65%);
+    border-radius: 3px;
+
+}
+
+.skill:nth-child(3) .percent{
+    background-color: hsl(186, 34%, 60%);
+}
+
+.percent:hover:before{
+    content: attr(title);
+    position: absolute;
     background-color: black;
     color: white;
-    display: none;
-
+    padding: 4px 6px;
+    top: -32px;
+    left: 0px;
+    border-radius: 4px;
+    box-shadow: 0 0 4px 2px rgba(0,0,0,0.1);
 }
 
-.day{
-    position: absolute;
-    bottom: -10%;
-    width: 45px;
-    /* left: 50%; */
-    transform: translateX(35%);
-    padding-top: 10px;
-    text-align: center;
-    color: green;
 
+
+.day{
+    margin-top: 8px;
+    color: hsl(28, 10%, 53%);
+}
+
+
+
+.percent:hover{
+    background-color: hsl(9, 68%, 73%);
+    cursor: pointer;
+}
+
+.skill:nth-child(3) .percent:hover{
+    background-color: hsl(187, 37%, 74%);
+    
+}
+
+@media screen and (max-width: 600px){
+
+    
+    body{
+        width: 50%;
+        max-width: 700px;
+    }
+
+    header{
+        width: 400px;
+    }
+
+    main{
+        width: 400px;
+        height: 380px;
+    }
+
+    .box{
+        width: 420px;
+        gap: 5%;
+    }
+
+    .graph{
+        height: 130px;
+        width: 30px;
+    }
+
+    .container{
+        height: 520px;
+    }
+
+    section{
+        height: 30vh;
+    }
+
+    .percent:hover:before{
+        padding: 2px 4px;
+
+    }
+
+    .price{
+        font-size: 1.8em;
+    }
+
+    hr{
+        margin-bottom: 20px;
+    }
+
+
+    
 }
