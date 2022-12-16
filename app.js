@@ -1,10 +1,12 @@
 const container = document.querySelector('.box');
 
-const renderchart = async () => {
-  let url = 'http://localhost:3000/post';
+fetch('data.json')
 
-  const respons = await fetch(url);
-  const charts = await respons.json();
+.then(function (response) {
+  return response.json();
+})
+
+.then(function (charts) {
 
 
   charts.forEach(chart => {
@@ -17,14 +19,9 @@ const renderchart = async () => {
       <div class="day">${chart.day}</div>
       </div>
     `
-
-      
-
   })
 
-}
-
-window.addEventListener('DOMContentLoaded', () => renderchart());
+})
 
 
 
