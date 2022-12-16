@@ -21,7 +21,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 800px;
-    gap: 10px;
+    gap: 25px;
 }
 
 header{
@@ -40,7 +40,7 @@ main{
     background-color: hsl(33, 100%, 98%);
     border-radius: 1em;
     padding: 30px;
-    height: 450px;
+    height: 500px;
 }
 
 #head p{
@@ -90,7 +90,8 @@ section {
 }
 
 hr{
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 .box{
@@ -99,6 +100,7 @@ hr{
     gap: 20%;
     width: 140px;
     background: transparent;
+    height: 0px;
 }
 
 .graph{
@@ -137,6 +139,7 @@ hr{
 .day{
     margin-top: 8px;
     color: hsl(28, 10%, 53%);
+
 }
 
 
@@ -197,6 +200,8 @@ hr{
 
     hr{
         margin-bottom: 20px;
+        margin-top: 20px;
+
     }
 
 
